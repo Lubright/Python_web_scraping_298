@@ -91,10 +91,18 @@ try:
 
     t0 = []
     t1 = []
-    n = int(input())
+    # n = int(input())
 
-    for i in range(n):
-        line, line2 = input(), input()
+    test_data = []
+    with open('test_hw202.txt', 'rt', encoding='utf-8') as fin:
+        for line in fin:
+            # print(line)
+            test_data.append(line.strip())
+    # print(test_data)
+    # input()
+
+    for i in range(len(test_data)//2):
+        line, line2 = test_data[2*i], test_data[2*i+1]
         dt = gen_datetime_obj(line)
     #     print(dt)
         # line2 = input()
